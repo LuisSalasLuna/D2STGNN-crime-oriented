@@ -68,17 +68,6 @@ Check the config files of the dataset in `configs/$DATASET_NAME`, and set the st
 
 Download the pre-trained model files in [Google Drive](https://drive.google.com/drive/folders/18nkluGajYET2F9mxz3Kl6jcFVAAUGfpc?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1tGOdVy4uz5TcvAk5FrR4MQ?pwd=8888) into the `output` folder and run the command line in `4`.
 
-## 6 Results and Visualization
-
-<img src="figures/TheTable.png" alt="TheTable" style="zoom:80%;" />
-
-<img src="figures/Visualization.png" alt="Visualization" style="zoom:100%;" />
-
-## 7. More Related Works
-
-- [STEP: Pre-training-Enhanced Spatial-Temporal Graph Neural Network For Multivariate Time Series Forecasting. SIGKDD 2022.](https://github.com/zezhishao/STEP)
-
-- [BasicTS: An Open Source Standard Time Series Forecasting Benchmark.](https://github.com/zezhishao/BasicTS)
 
 ## 8. Citing
 
@@ -106,7 +95,5 @@ If you find this repository useful for your work, please consider citing it as f
 ## References
 
 [1] Atwood J, Towsley D. Diffusion-convolutional neural networks[J]. Advances in neural information processing systems, 2016, 29: 1993-2001.
-
 [2] Guo S, Lin Y, Feng N, et al. Attention based spatial-temporal graph convolutional networks for traffic flow forecasting[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2019, 33(01): 922-929.
-
 [3] Guo S, Lin Y, Wan H, et al. Learning dynamics and heterogeneity of spatial-temporal graph data for traffic forecasting[J]. IEEE Transactions on Knowledge and Data Engineering, 2021.

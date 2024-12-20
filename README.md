@@ -24,35 +24,9 @@ pip install -r requirements.txt
 
 ## 3. Data Preparation
 
-### 3.1 Download Data
-
-For convenience, we package these datasets used in our model in [Google Drive](https://drive.google.com/drive/folders/1H3nl0eRCVl5jszHPesIPoPu1ODhFMSub?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1iFcKJ8qeCthyEgPEXYJ-rA?pwd=8888).
-
-They should be downloaded to the code root dir and replace the `raw_data` and `sensor_graph` folder in the `datasets` folder by:
-
-```bash
-cd /path/to/project
-unzip raw_data.zip -d ./datasets/
-unzip sensor_graph.zip -d ./datasets/
-rm {sensor_graph.zip,raw_data.zip}
-mkdir log output
-```
-
-Alterbatively, the datasets can be found as follows:
-
-- METR-LA and PEMS-BAY: These datasets were released by DCRNN[1]. Data can be found in its [GitHub repository](https://github.com/chnsh/DCRNN_PyTorch), where the sensor graphs are also provided.
-
-- PEMS04 and PEMS08: These datasets were released by ASTGCN[2] and ASTGNN[3]. Data can also be found in its [GitHub repository](https://github.com/guoshnBJTU/ASTGNN/tree/main/data).
+### 3.1 Build Data
 
 ### 3.2 Data Process
-
-```bash
-python datasets/raw_data/$DATASET_NAME/generate_training_data.py
-```
-
-Replace `$DATASET_NAME` with one of `METR-LA`, `PEMS-BAY`, `PEMS04`, `PEMS08`.
-
-The processed data is placed in `datasets/$DATASET_NAME`.
 
 ## 4. Training the D2STGNN Model
 
@@ -60,16 +34,13 @@ The processed data is placed in `datasets/$DATASET_NAME`.
 python main.py --dataset=$DATASET_NAME
 ```
 
-E.g., `python main.py --dataset=METR-LA`.
+E.g., `python main.py --dataset=CH81`.
 
 ## 5 Loading a Pretrained D2STGNN Model
 
 Check the config files of the dataset in `configs/$DATASET_NAME`, and set the startup args to test mode.
 
-Download the pre-trained model files in [Google Drive](https://drive.google.com/drive/folders/18nkluGajYET2F9mxz3Kl6jcFVAAUGfpc?usp=sharing) or [BaiduYun](https://pan.baidu.com/s/1tGOdVy4uz5TcvAk5FrR4MQ?pwd=8888) into the `output` folder and run the command line in `4`.
-
-
-## 8. Citing
+## 6. Citing
 
 If you find this repository useful for your work, please consider citing it as follows:
 
@@ -94,6 +65,4 @@ If you find this repository useful for your work, please consider citing it as f
 
 ## References
 
-[1] Atwood J, Towsley D. Diffusion-convolutional neural networks[J]. Advances in neural information processing systems, 2016, 29: 1993-2001.
-[2] Guo S, Lin Y, Feng N, et al. Attention based spatial-temporal graph convolutional networks for traffic flow forecasting[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2019, 33(01): 922-929.
-[3] Guo S, Lin Y, Wan H, et al. Learning dynamics and heterogeneity of spatial-temporal graph data for traffic forecasting[J]. IEEE Transactions on Knowledge and Data Engineering, 2021.
+[1]  Shao, Z., Zhang, Z., Wei, W., Wang, F., Xu, Y.-J., Cao, X., and Jensen, C. (2022). Decoupled dynamic spatial-temporal graph neural network for traffic forecasting. Proceedings of the VLDB Endowment, 15:2733–2746.

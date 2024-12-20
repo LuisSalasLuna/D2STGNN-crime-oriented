@@ -1,0 +1,12 @@
+# MEJOR CLONAR ENVIROMENT (reqs no considerados)
+pip install -r requirements.txt
+
+# DOWNLOAD & UNZIP comprimidos
+
+python main.py --dataset=$DATASET_NAME
+python main.py --dataset=CH81
+python main.py --dataset=CH179
+python main.py --dataset=CH250
+python main.py --dataset=CH385
+
+tensorboard --logdir runs
